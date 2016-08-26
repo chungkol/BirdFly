@@ -45,17 +45,17 @@ class ViewController: UIViewController {
         UIView.animateWithDuration(3, animations: {
             self.bird.center = CGPointMake(self.view.bounds.size.width-50, self.view.bounds.size.height-50)
             }) { (finished) in
-                self.bird.transform = CGAffineTransformConcat(CGAffineTransformScale(self.bird.transform,-1, 1), CGAffineTransformMakeRotation(45))
+                self.bird.transform = CGAffineTransformConcat(CGAffineTransformScale(self.bird.transform,-1, 1), CGAffineTransformMakeRotation(0))
                 
                 UIView.animateWithDuration(3, animations: {
                     self.bird.center = CGPointMake(50, self.view.bounds.size.height-50)
                 }) { (finished) in
-                    self.bird.transform = CGAffineTransformConcat(CGAffineTransformScale(self.bird.transform,1, -1), CGAffineTransformMakeRotation(45))
+                    self.bird.transform = CGAffineTransformIdentity
                     
                     UIView.animateWithDuration(3, animations: {
                         self.bird.center = CGPointMake(self.view.bounds.size.width-50, 50)
                     }) { (finished) in
-                        self.bird.transform = CGAffineTransformConcat(CGAffineTransformScale(self.bird.transform,-1, 1), CGAffineTransformMakeRotation(90))
+                         self.bird.transform = CGAffineTransformConcat(CGAffineTransformScale(self.bird.transform,-1, 1), CGAffineTransformMakeRotation(0))
                         UIView.animateWithDuration(3, animations: {
                             self.bird.center = CGPointMake(50, 50)
                         }) { (finished) in
